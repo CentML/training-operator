@@ -19,6 +19,8 @@ spec:
       containers:
         - command:
             - /manager
+          args:
+            - --pytorch-init-container-max-tries=300
           image: kubeflow/training-operator
           name: training-operator
           ports:
